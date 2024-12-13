@@ -22,14 +22,19 @@ namespace SO
             return _gameLevelsPrefab[_activeLevel];
         }
 
-        public void LevelComplited()
+        public void LevelComplited() => _activeLevel++;
+
+        public void SetBackLevel()
         {
-            _activeLevel++;
+            if (_activeLevel <= 0)
+            {
+                _activeLevel = 0;
+                return;
+            }
+
+            _activeLevel--;
         }
 
-        public void Reset()
-        {
-            _activeLevel = 0;
-        }
+        public void Reset() => _activeLevel = 0;
     }
 }

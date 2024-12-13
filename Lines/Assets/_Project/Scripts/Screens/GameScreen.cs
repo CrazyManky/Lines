@@ -105,6 +105,14 @@ namespace _Project.Scripts.Screens
             AudioManager.PlayButtonClick();
             Destroy(lineDrawerInstance.gameObject);
         }
+
+        public void LoadBackLevel()
+        {
+            _levelsConfig.SetBackLevel();
+            Dialog.ShowGameScreen();
+            AudioManager.PlayButtonClick();
+            Destroy(lineDrawerInstance.gameObject);
+        }
     }
 }
 
